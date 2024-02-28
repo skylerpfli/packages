@@ -12,8 +12,10 @@ environment:
 flutter:
   plugin:
     platforms:
-      android:
-        default_package: image_picker_android
+      # 禁用Android平台
+      # 解决心悦由此带来的crash，见: https://bugly.qq.com/v2/crash-reporting/crashes/900053466/17125734?pid=1
+#      android:
+#        default_package: image_picker_android
       ios:
         default_package: image_picker_ios
       linux:
@@ -28,7 +30,7 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker_android: ^0.8.7
+#  image_picker_android: ^0.8.7
   image_picker_for_web: ">=2.2.0 <4.0.0"
   image_picker_ios: ^0.8.8
   image_picker_linux: ^0.2.1
